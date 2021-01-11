@@ -1,0 +1,85 @@
+.footer, .footer-wrapper {
+    /* border: 1px solid green; */
+    padding: 0px;
+}
+.footer {
+    height: 288px;
+    /* margin-top: 150px; */
+    background-color: #EAEAEA;
+}
+
+.footer-wrapper {
+    margin-top: 60px;
+}
+
+.social-media-icons > img {
+    width: 48px;
+}
+
+a {
+    text-decoration: none;  
+    position: relative;
+}
+
+.email {
+    font-size: 48px;
+    font-weight: 900;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    width: fit-content;
+}
+
+.email::after {
+    content: "";
+    position: absolute;
+    width: 102%;
+    height: 10px;
+    border-bottom: solid #E7C82A 20px;
+    opacity: .5;
+    bottom: 0px;
+    left: 0px;
+}
+
+
+/* **********************  */
+/* Mobile Responsiveness */
+/* ********************* */
+
+/* Tablet */
+@media only screen and (max-width: 800px) {
+
+    .footer {
+        height: 250px;
+    }
+
+    .social-media-icons > img{
+        width: 30px;
+    }
+
+    .email {
+        font-size: 30px;
+    }
+    .email::after {
+        border-bottom: solid #E7C82A 10px;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 450px) {
+
+    .footer-wraper {
+        margin-top: 30px;
+    }
+    .footer {
+        height: 150px;
+    }
+
+    .social-media-icons > img {
+        width: 20px;
+    }
+
+    .email {
+        font-size: 24px;
+    }
+}

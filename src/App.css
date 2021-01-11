@@ -1,38 +1,279 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap');
+
+* {
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Font Style */
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  margin-top: 45px;
+  margin-bottom: 25px;
+}
+
+.h1-splash {
+  font-size: 120px;
+}
+
+.h1-section-header {
+  font-size: 58px;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.h2-splash {
+  font-weight: 400;
+  color: #858585;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 125px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3::before {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  border-bottom: 1px solid #000000;
+  vertical-align: middle;
+  margin-right: 3px;
+  text-transform: uppercase;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h4 {
+  font-size: 24px;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.highlight-box {
+  width: fit-content;
+  position: relative;
+}
+
+.highlight {
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  height: 10px;
+  border-bottom: solid #E7C82A 10px;
+  bottom: -2px;
+  opacity: .5;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 150.2%;
+  font-size: 22px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.quote {
+  font-weight: medium;
+  font-size: 50px;
+}
+
+.overview-title {
+  /* border: 1px hotpink solid; */
+  max-width: 1140px;
+  width: 100%;
+}
+
+/* Flex Classes */
+.flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.center {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-d-col {
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.flex-d-row {
+  flex-direction: row;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.center-vertical {
+  align-items: center;
+  align-content: center;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.no-top-margin {
+  margin-top: 0;
+}
+
+/* Sections */
+section {
+  width: 80%;
+  /* border: 1px solid hotpink; */
+  padding-top: 215px;
+  max-width: 1140px;
+}
+
+.section-gray {
+  background-color: #F6F6F6;
+}
+
+.full-bleed {
+  width: 100%;
+}
+
+/* **********************  */
+/* Mobile Responsiveness */
+/* ********************* */
+
+/* Smaller Desktop */
+@media only screen and (max-width: 980px) {
+  h3 {
+    font-size: 18px;
+    padding-bottom: 20px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Desktop to Tablet */
+@media only screen and (max-width: 830px) {
+  /* Fonts */
+  h1 {
+    font-size: 36px;
+    margin-top: 25px;
+    margin-bottom: 15px;
   }
+  
+  .h1-splash {
+    font-size: 72px;
+  }
+  
+  .h1-section-header {
+    font-size: 42px;
+  }
+
+  .h2-splash {
+    font-size: 30px;
+  }
+  
+  h3 {
+    font-size: 18px;
+    padding-bottom: 60px;
+  }
+  
+  h4 {
+    font-size: 20px;
+  }
+  
+  h5 {
+    font-size: 16px;
+  }
+  
+  p {
+    line-height: 150.2%;
+    font-size: 16px;
+  }
+  
+  .quote {
+    font-size: 30px;
+  }
+
+  /* Sections */
+  section {
+    width: 85%;
+    padding-top: 115px;
+  }
+  
+}
+
+
+
+/* Tablet to Mobile */
+@media only screen and (max-width: 550px) {
+  /* Fonts */
+  h1 {
+    font-size: 32px;
+    margin-top: 15px;
+  }
+  
+  .h1-splash {
+    font-size: 64px;
+  }
+  
+  .h1-section-header {
+    font-size: 20px;
+  }
+
+  .h2-splash {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 12px;
+    padding-bottom: 30px;
+  }
+  
+  h4 {
+    font-size: 18px;
+  }
+
+
+  
+  h5 {
+    font-size: 16px;
+  }
+  
+  p {
+    line-height: 150.2%;
+    font-size: 12px;
+  }
+  
+  .quote {
+    font-size: 18px;
+  }
+
+  /* Sections */
+  section {
+    width: 90%;
+    padding-top: 75px;
+  }
+
 }

@@ -1,0 +1,52 @@
+/* Home Splash Screen */
+.flag {
+    width: 100%;
+    border: 1px hotpink;
+    height: 800px;
+    position: relative;
+    padding-top: 0px;
+    text-align: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+  }
+  
+.flag-title {
+    position: absolute;
+    /* top: 50%; */
+
+}
+
+
+.projects-row {
+  margin-bottom: 150px;
+}
+
+/* **********************  */
+/* Mobile Responsiveness */
+/* ********************* */
+
+/* Desktop to Tablet */
+@media only screen and (max-width: 1000px) {
+  .projects-row {
+    margin-bottom: 50px;
+  }
+}
+
+/* Tablet */
+@media only screen and (max-width: 800px) {
+  .flag {
+    height: 550px;
+  }
+
+  .projects-row {
+    margin-bottom: 100px;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 425px) {
+  .projects-row {
+    margin-bottom: 40px;
+  }
+}
