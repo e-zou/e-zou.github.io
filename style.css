@@ -170,9 +170,14 @@ footer {
     height: 160px;
 }
 
+iframe {
+  width: 100%;
+  height: 100vh;
+}
+
 @media screen and (max-width: 750px) {
     main, footer {
-        padding: 0 2rem;
+        padding: 2rem 2rem;
     }
 }
 
@@ -376,17 +381,20 @@ button.main-button {
 
 
 /****************************** PROJECT PAGES ****************************/
+.project-overview > h1 {
+  margin-bottom: 8px;
+}
+
+.project-content > section {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 
 .project-overview {
     max-width: 1000px;
+    width: 100%;
     margin: 0;
 }
-  
-  .project-overview h1,
-  .project-overview > p {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
   
   /* Grid container for the 4 project details */
   .project-overview .project-details {
@@ -494,6 +502,7 @@ button.main-button {
   
   /* Optional: Make sure headings & intro span full width */
   .project-overview h1,
+  .project-overview h2,
   .project-overview > p,
   .project-overview > hr {
     grid-column: 1 / -1;

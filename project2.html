@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Project 2</title>
+    <title>ApplyGrad</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="" />
     <link rel="icon" href="favicon.png">
@@ -26,11 +26,216 @@
             </ul>
           </nav>
     </header>
-    <main>
-        <section>
-            <h1>This is project 2</h1>
+   <main>
+        <section class="project-overview">
+            <h2>ApplyGrad @ Carnegie Mellon University</h2>
+            <h1>Reimagining the enterprise admission review workflow</h1>
+            <p>
+                Every year, 10,000+ applications flow through ApplyGrad, the flagship software used by Carnegie Mellon University’s School of Computer Science to select incoming students. It processes applications for 47 masters and doctoral graduate programs across 6 different departments. Major improvements are needed in order to efficiently evaluate the growing number of future applications, which have evolved in criteria and complexity over time, beyond what ApplyGrad was originally designed for.  
+            </p>
+            <div class="project-details">
+                <p class="project-details__label"><strong>Role</strong></p>
+                <p>
+                    Product Manager<br>
+                    UX Designer<br>
+                    UX Researcher
+                </p>
+            </div>
+            <div class="project-details">
+                <p class="project-details__label"><strong>Timeline</strong></p>
+                <p>Feb 2021 - Aug 2021 <br>(8 months)</p>
+            </div>
+            <div class="project-details">
+                <p class="project-details__label"><strong>Tools</strong></p>
+                <p>Figma, Google Suite, Maze.co, Grain.co</p>
+            </div>
+            <div class="project-details">
+                <p class="project-details__label"><strong>Skills</strong></p>
+                <p>Contextual Inquiry, Interviewing, Heuristic Evaluation, A/B Testing</p>
+            </div>
         </section>
-    </main> 
+        <hr>
+        <div class="project-body">
+            <div class="project-content">
+                <section class="overview" id="Overview">
+                    <h2>Overview</h2>
+                    <p>
+                        Over the course of eight months, my team, Team Super Cool Scholars, used a variety methods of research to develop prototypes for one of Carnegie Mellon's graduate application systems. Our clients are faculty from the School of Computer Science. Our primary goals is to reduce reviewer cognitive burden so that they can efficiently and effectively evaluate the growing10,000+ yearly applications.
+                    </p>
+                    <h3>Problem</h3>
+                    <p>
+                        Every year, 10,000+ applications flow through ApplyGrad, the flagship software used by Carnegie Mellon University’s School of Computer Science to select incoming students. It processes applications for 47 masters and doctoral graduate programs across 6 different departments. Major improvements are needed in order to efficiently evaluate the growing number of future applications, which have evolved in criteria and complexity over time, beyond what ApplyGrad was originally designed for. 
+                    </p>
+                    <h3>Solution & Impact</h3>
+                    <p>Three major areas were identified, re-designed, and then presented to our clients: </p>
+                    <ol>
+                        <li>Note-taking to improve applicant data retention and processing</li>
+                        <li>Additional data manipulation and visual displays of applications for easy recall</li>
+                        <li>Basic Visual UI enhancements to facilitate user workflow and information retrieval </li>
+                    </ol>
+                </section>
+                <section class="project-content-section" id="Discover">
+                    <h2>The Story</h2>
+                    <h3>Phase 1: Discover</h3>
+                    <h4>Background Research & Heuristic Evaluations</h4>
+                    <p>
+                        Our team took time to play around in a sandbox version of the application portal to familiarize ourselves with ApplyGrad and all its quirks. We also compiled screenshots and conducted initial evaluations of the product. We were able to create an ecosystem map, which displayed all the stakeholders in the system and the values that they provide for each other using the system. We identified three core persona groups: the reviewers, admins, and applicants, who use the system to make their exchanges in actions.
+                    </p>
+                    <figure>
+                        <img src="assests/project 2/Ecosystem.png" alt="ApplyGrad Ecosystem" style="width:100%">
+                        <figcaption>
+                            The ecosystem maps of all the key stakeholders impacted and involved in the graduate application process, so that we can context at the forefront of interpreting user feedback.
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assests/project 2/Heuristic Evaluations.png" alt="Heuristic Evaluations Report" style="width:100%">
+                        <figcaption>
+                            These are slides from heuristic research report that we wrote. It includes tracking metrics such as priority, NN/G heuristic violations along with qualitative data such as findings with our recommendations.
+                        </figcaption>                     
+                    </figure>
+                    <h4>Admin contextual inquiry: Speaking to the users who use the system the most</h4>
+                    <p>
+                        Our next step was identifying steps and observing real user behavior in the system in order to identify efficiency opportunities, so we conducted 19 contextual inquiries with reviewers and admins, representing all 7 School of Computer Science departments. We identified opportunities:
+                    </p>
+                    <ol>
+                        <li>
+                            Improve data comparison & displays for faster workflow: 59% of review time is dedicated to sorting, filtering, and working in an external spreadsheet to clean data.
+                        </li>
+                        <li>
+                            Improve on-screen note-taking and annotations: Reviewers take the longest time (days to weeks) to evaluate participants, which includes taking notes and writing summaries to present to their admin teams.
+                        </li>
+                        <li>
+                            Create tools to improve fairness and identify merit: A majority of reviewers expressed interest in tools that will help them evaluate for fairness, such as a name-blind system.
+                        </li>
+                    </ol>
+                    <p>The bottom line is that a lot of reviewing is a manual process that requires reviewers high concentration and a low error rate.</p>
+
+                    <figure>
+                        <img src="assests/project 2/Journey Map.png" alt="Full user journey map" style="width:100%">
+                        <figcaption>
+                            This is the full user journey map of the review process based on multiple sessions of user research. We tagged our opportunities by the different types of solutions we wanted to explore (e.g., automation, AI, data validation, etc.) to stay organized and focused.
+                        </figcaption>                     
+                    </figure>
+                </section>
+                <section class="project-content-section" id="Design & Evaluate">
+                    <h2>Phase 2: Design & Evaluate</h2>
+                    <h3>Speed dating, AI Competitive Analysis, Expert interviews: Evaluating openness to AI and automation</h3>
+                    <p>
+                        We interviewed 4 reviewers representing 4 different sized departments in the SCS to co-design and solicit reviewer’s general sentiments about some of our pretotypes around machine learning and automation. We also interviewed 3 reviewers using a Wizard-of-Oz approach to see how open they would be to a new annotating & note-taking system to improve the quality of their reviews. We also consulted 3 ML experts, esteemed professors of machine learning, in order to hear their opinions on how to best integrate AI into a legacy system.
+                    </p>
+                    <ol>
+                        <li>
+                            For the most part, reviewers reacted negatively to ML taking part in the decision-making process and prefer it as a tool to check after they have made their own judgement calls.
+                        </li>
+                        <li>
+                            Reviewers reacted positively towards annotating and felt that the quality of their review improved when they did it manually. They were hesitant about solutions where AI wrote notes for them, but did appreciate summaries if it were accurate.
+                        </li>
+                        <li>
+                            Building solid systems that can use advanced tools or partially have ML requires having clean and solid data. Experts recommended finding ways to streamline how we capture data in the system.
+                        </li>
+                    </ol>
+                    <p>
+                        By interviewing multiple groups of people, we learned the boundaries pushing towards a more advanced system, while staying true to what reviewers valued.
+                    </p>
+                    <figure>
+                        <img src="assests/project 2/Wizard of Oz.png" alt="Wizard of Oz Screenshare Session" style="width:100%">
+                        <figcaption>
+                            We held and Wizard of Oz sessions that imitated the future solution we wanted to build. In this picture, one person is moderating while the other is taking notes and pretending to be AI to enter information in a spreadsheet.
+                        </figcaption>                     
+                    </figure>
+                    <figure>
+                        <img src="assests/project 2/Storyboard and Affinity Diagram.png" alt="Storyboarding Session & Affinity Diagram" style="width:100%">
+                        <figcaption>
+                            We also conducted storyboard sessions with users and tracked their openness to AI solutions. Afterwards, we also talked to ML experts and put all our AI-related findings on an affinity mapping board so that we can find the top-level insights to the question “How much AI or ML should we use, if any?”
+                        </figcaption>                     
+                    </figure>
+                </section>
+                <section class="project-content-section" id="Build & Test">
+                    <h2>Phase 3: Build & Test</h2>
+                    <h3>Conducting A/B Testing to support our assumptions</h3>
+                    <p>
+                        In order to make sure our designs supported user tasks, our team also ran A/B testing with 24 different users, 12 for the old system and 12 with our new system. We then compared the results of basic task tasks such as finding an application, evaluating an application, and taking notes for an application. The results were that our new system was 13% faster for users to complete their tasks.
+                    </p>
+                    <figure>
+                        <img src="assests/project 2/Heat Map.png" alt="Heat Map of ApplyGrad" style="width:100%">
+                        <figcaption>
+                            In the legacy system, both experienced and new ApplyGrad users had difficulty navigating to their list of assigned applicants. Meanwhile, in our new system, users were able to navigate much faster to their assigned list of applicants.
+                        </figcaption>                     
+                    </figure>
+                    <h3>Our design choices optimizes for efficiency & impact</h3>
+                    <p>
+                        The features we hand-selected into our new application app were based on feedback and considerations such as the number of users affected, the number of applications it affects, the amount of time saved, fairness of system to stakeholders on a Likert Scale, and estimated time of implementation.
+                    </p>
+                    <figure>
+                        <img src="assests/project 2/Impact.png" alt="Impact Graphic" style="width:100%">
+                        <figcaption>
+                            This graphic is part of a final presentation that we gave to our stakeholders when justifying the features that we chose to integrate into our app.
+                        </figcaption>                     
+                    </figure>
+                </section>
+                <section class="project-content-section" id="Deliver">
+                    <h2>Phase 4: Delivery</h2>
+                    <h3>We delivered our stakeholders a new design system & evidence-based UIs</h3>
+                    <p>After we researched and iterated upon our solution based off of user feedback, we:</p>
+                    <ul>
+                        <li>
+                            Delivered one comprehensive design system with colors, typography, and page template specs
+                        </li>
+                        <li>
+                            Created & benchmarked success metrics from 44 UX research study sessions with users so that leadership can quantify improvements and initiate further studies. 
+                        </li>
+                        <li>
+                            Provided a summary of all studies conducted on the system so that product teams can supply their decisions with hard evidence instead of assumptions. 
+                        </li>
+                    </ul>
+                    <figure>
+                        <img src="assests/project 2/prototype-1.png" alt="Review and evaluations screen" style="width:100%">
+                        <figcaption>
+                            Reviewers are able to see PDFs side-by-side with the department-specific grading and ranking criteria.
+                        </figcaption>                     
+                    </figure>
+                    <figure>
+                        <img src="assests/project 2/prototype-2.png" alt="Note-taking and annotations screen" style="width:100%">
+                        <figcaption>
+                            Reviewers are able to annotate and tag their notes, to speed up their review workflow so that they no longer need to switch tools to find notes. 
+                        </figcaption>                     
+                    </figure>
+                    <figure>
+                        <img src="assests/project 2/prototype-3.png" alt="Home screen to view applicants" style="width:100%">
+                        <figcaption>
+                            Reviewers are able to clearly see which applicants are assigned to themselves and view the scores in a conventional format.
+                        </figcaption>                     
+                    </figure>
+                    <figure>
+                        <img src="assests/project 2/prototype-4.png" alt="Home screen with visual graphic summary view" style="width:100%">
+                        <figcaption>
+                            We also provided a visual view for reviewers and admins to more easily compare and contrast student applications.
+                        </figcaption>                     
+                    </figure>
+                </section>
+                <section class="project-content-section" id="Final Prototype">
+                    <h2>Final Prototype</h2>
+                    <p>Feel free to play around with the Figma prototype. You can navigate your way through the prototype as if you were a real reviewer.
+                        I recommend opening the prototype to full-screen to get the best user experience. 
+                    </p>
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F65qL3JBKyNesUdpOb7x25X%2FApplyGrad-Sprint-4-Prototype-FINAL%3Fpage-id%3D1327%253A29682%26node-id%3D1327%253A30329%26viewport%3D744%252C2117%252C0.2334328144788742%26scaling%3Dmin-zoom%26starting-point-node-id%3D1327%253A29843" title="working prototype" allowfullscreen></iframe>
+                </section>
+            </div>
+            <nav class="project-nav" aria-label="Secondary navigation">
+                <ul>
+                    <li><strong>TABLE OF CONTENTS</strong></li>
+                    <li><a href="#Overview">Overview</a></li>
+                    <li><a href="#Discover">Phase 1: Discover</a></li>
+                    <li><a href="#Design & Evaluate">Phase 2: Design & Evaluate</a></li>
+                    <li><a href="#Build & Test">Phase 3: Build & Test</a></li>
+                    <li><a href="#Deliver">Phase 4: Deliver</a></li>
+                    <li><a href="#Final Prototype">Final Prototype</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr>
+
+    </main>
     <footer>
         <p>Hand-stitched together with code, love, and a dash of curiosity. Thanks for visiting! 💫🛠️ ♥ <br>
             © <span id="copyright-year"> </span> Emily Zou 
