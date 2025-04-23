@@ -3,6 +3,7 @@
 /* 1. Import fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Georgia');
 
 *,
 *::before,
@@ -26,6 +27,45 @@ hr {
     border: 1px solid #E1E4E8;
     margin: 55px 0px;
 }
+
+/* Base list styles */
+ul, ol {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  /* Unordered list (bullets) */
+  ul li {
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  /* Ordered list (numbers) */
+  ol li {
+    margin-bottom: 1rem;
+    padding-left: 0.25rem;
+    display: list-item;
+  }
+  
+  /* Optional: Medium-style disc */
+  ul li::marker {
+    color: #FF6B6B; /* Coral bullet like Medium */
+    font-size: 1rem;
+  }
+  
+  /* Optional: Clean number styling for ordered lists */
+  ol {
+    list-style-position: inside;
+  }
+  
+  li > p {
+    margin: 0;
+  }
+
+  
 /* END OF DEFAULTS */
 
 /******** TYOPGRAPHY ********/
@@ -59,7 +99,9 @@ h4 {
     font-size: 22px;
     font-weight: medium;
     line-height: 135%;
+    margin-bottom: 8px;
 }
+
 
 p {
     font-family: 'Inter', sans-serif;
@@ -68,13 +110,37 @@ p {
     line-height: 150%;
     margin-bottom: 30px;
 }
-
-.quote {
-    font-family: 'Georgia';
-    font-size: 18px;
-    font-weight: regular;
-    line-height: 150%;
+figure > img {
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1));
 }
+figcaption {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 140%;
+    color: #8D929B;
+    margin-bottom: 30px;
+}
+
+blockquote {
+    font-family: 'Georgia';
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 150%;
+    border-left: 4px solid #FF6B6B;
+    padding-left: 1rem;
+    font-style: italic;
+    color: #333;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+ blockquote cite {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    color: #666;
+    font-style: normal;
+ }
 
 .blue-text {
     color: #4A90E2;
@@ -126,6 +192,11 @@ footer {
     margin: 10px;
     text-decoration: none;
     font-weight: bold;
+    width: 50px;
+  }
+
+  .nav__logo > img {
+    width: 100%;
   }
   /* Navigation links */
   .nav__links {
@@ -150,7 +221,7 @@ footer {
     color: inherit;
     text-decoration: none;
     position: relative;
-    padding-bottom: 4px;
+    padding-bottom: 10px;
     transition: color 0.2s ease;
     font-size: 1rem;
 }
@@ -247,7 +318,7 @@ footer {
 
 /* Explore button on home page */
 
-button.main {
+button.main-button {
     color: #FF6B6B;
     background-color: #FFFFFF;
     border: 3px solid #FF6B6B;
@@ -258,7 +329,7 @@ button.main {
     transition: background-color 0.2s, color 0.2s;
   }
   
-  button.main:hover {
+  button.main-button:hover {
     background-color: #FF6B6B;
     color: #FFFFFF;
   }
@@ -302,3 +373,130 @@ button.main {
         display: none;
     }
 }
+
+
+/****************************** PROJECT PAGES ****************************/
+
+.project-overview {
+    max-width: 1000px;
+    margin: 0;
+}
+  
+  .project-overview h1,
+  .project-overview > p {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Grid container for the 4 project details */
+  .project-overview .project-details {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  /* Layout the 4 boxes in a grid */
+  .project-overview {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .project-details__label {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+    border-bottom: 3px solid #E4BD7C;
+    width: 100%
+  }
+  
+
+  /* Layout container for content + sticky nav */
+.project-body {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 4rem;
+    /* padding: 2rem 1rem; */
+    font-size: 18px;
+  }
+  
+  
+  /* Main content spans 3/4 */
+  .project-content {
+    /* width: 100%; */
+    max-width: 1200px;
+  }
+
+  /* Spacing the sections a little better */
+  .project-content > h3 {
+    margin-top: 35px;
+  }
+  
+  /* Sticky secondary nav */
+  .project-nav {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+    background: #F7F9FC;
+    padding: 1rem;
+    border-left: 2px solid #eee;
+    border-radius: 0.5rem;
+  }
+  
+  /* Vertical nav styling */
+  .project-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .project-nav li {
+    margin-bottom: 1rem;
+  }
+  
+  .project-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    border-left: 3px solid transparent;
+    padding-left: 0.5rem;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  
+  .project-nav a:hover,
+  .project-nav a:focus {
+    color: #E76F51; /* coral-like highlight */
+    border-left-color: #E76F51;
+  }
+    
+  /* Responsive grid for the project details */
+  @media (min-width: 600px) {
+    .project-overview {
+      grid-template-columns: 1fr 1fr; /* 2 columns for midsize screens */
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .project-overview {
+      grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns for large screens */
+    }
+  }
+
+  @media (max-width: 900px) {
+    .project-body {
+        grid-template-columns: 1fr; /* 1 column */
+    }
+    .project-nav {
+        display: none;
+    }
+  }
+  
+  /* Optional: Make sure headings & intro span full width */
+  .project-overview h1,
+  .project-overview > p,
+  .project-overview > hr {
+    grid-column: 1 / -1;
+  }
+
+/* END OF PROJECT PAGES */
