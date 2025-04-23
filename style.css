@@ -34,7 +34,6 @@ ul, ol {
     padding-left: 1.5rem;
     font-size: 1rem;
     line-height: 1.8;
-    color: #333;
   }
   
   /* Unordered list (bullets) */
@@ -52,13 +51,17 @@ ul, ol {
   
   /* Optional: Medium-style disc */
   ul li::marker {
-    color: #FF6B6B; /* Coral bullet like Medium */
+    color: #4A90E2; /* Coral bullet like Medium */
     font-size: 1rem;
   }
   
   /* Optional: Clean number styling for ordered lists */
   ol {
     list-style-position: inside;
+  }
+  
+  ol li::marker {
+    color: #4A90E2;
   }
   
   li > p {
