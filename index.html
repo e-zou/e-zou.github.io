@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emily Zou</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <header>
+        <nav class="nav" role="navigation" aria-label="Main site navigation">
+            <a href="index.html" class="nav__logo">Logo</a>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://www.linkedin.com/in/emily-zou">Contact</a></li>
+            </ul>
+            <button id="menu-toggle" class="menu-toggle" onclick="togglemenu()" aria-label="Toggle menu">
+                <div class="menu-toggle__bar1"></div>
+                <div class="menu-toggle__bar2"></div>
+                <div class="menu-toggle__bar3"></div>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section class="section-hero">
+            <h1>👋 <br>
+                Hi, I’m Emily Zou. <br>
+                I’m a UX Researcher & Designer that creates clear, kind, and human-centered designs that genuinely matter.
+            </h1>
+        </section>
+        <hr>
+        <section class="section-projects">
+            <article class="project-1-card">
+                <h3 class="blue-text">Booz Allen Hamilton</h3>
+                <h2>Bridging the gap between  medical device regulators and manufacturers</h2>
+                <p>I led the research and design to improve a regulatory interaction program during the medical device’s journey from ideation to U.S. market launch.</p>
+                <a href="project1.html">
+                    <button class="main">Explore</button>
+                </a>
+            </article>
+            <hr>
+            <article class="project-2-card">
+                <h3 class="blue-text">ApplyGrad @ Carnegie Mellon University</h3>
+                <h2>Reimagining the enterprise admission review workflow </h2>
+                <p>I led the research & redesign of a legacy graduate review interface to more efficiently process thousands of applications to Carnegie Mellon University’s School of Computer Science.</p>
+                <a href="project2.html">
+                    <button class="main">Explore</button>
+                </a>
+            </article>
+        </section>
+        <hr>
+    </main>
+    <footer>
+        <p>Hand-stitched together with code, love, and a dash of curiosity. Thanks for visiting! 💫🛠️ ♥ <br>
+            © <span id="copyright-year"> </span> Emily Zou 
+        </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

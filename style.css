@@ -1,0 +1,304 @@
+/******** GLOBAL DEFAULTS ********/
+
+/* 1. Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+hr {
+    border: 1px solid #E1E4E8;
+    margin: 55px 0px;
+}
+/* END OF DEFAULTS */
+
+/******** TYOPGRAPHY ********/
+
+h1 {
+    font-family: 'Merriweather';
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 150%;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-family: 'Merriweather';
+    font-size: 36px;
+    font-weight: semi-bold;
+    line-height: 140%;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-family: 'Merriweather';
+    font-size: 28px;
+    font-weight: semi-bold;
+    line-height: 140%;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-family: 'Merriweather';
+    font-size: 22px;
+    font-weight: medium;
+    line-height: 135%;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 150%;
+    margin-bottom: 30px;
+}
+
+.quote {
+    font-family: 'Georgia';
+    font-size: 18px;
+    font-weight: regular;
+    line-height: 150%;
+}
+
+.blue-text {
+    color: #4A90E2;
+}
+
+
+/* END OF TYOPGRAPHY */
+
+/******** CONTAINERS ********/
+main, footer {
+    padding: 0 10rem;
+}
+
+main {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #F7F9FC;
+    color: #8D929B;
+    height: 160px;
+}
+
+@media screen and (max-width: 750px) {
+    main, footer {
+        padding: 0 2rem;
+    }
+}
+
+/* END OF CONTAINERS */
+
+/******** NAVIGATION *********/
+.nav {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10rem;
+    font-family: inherit;
+  }
+  
+  .nav__logo {
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  /* Navigation links */
+  .nav__links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+  }
+  
+  .nav__links li {
+    margin: 10px;
+  }
+  
+  .nav__links li a {
+    display: block;
+    text-decoration: none;
+  }
+
+/* Base link style — looks like normal text */
+.nav__links a {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.2s ease;
+    font-size: 1rem;
+}
+
+/* Coral underline effect */
+.nav__links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: #FF6B6B;
+    transition: width 0.3s ease;
+  }
+  
+  .nav__links a:hover::after,
+  .nav__links a:focus::after {
+    width: 100%;
+  }
+  
+  /* Optional: keep underline on active link */
+  .nav__links a.active::after {
+    width: 100%;
+  }
+
+  
+  /* Hide menu toggle by default (desktop) */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  /* Hamburger styling */
+  .menu-toggle__bar1,
+  .menu-toggle__bar2,
+  .menu-toggle__bar3 {
+    width: 21px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+  
+  /* Animation for toggle */
+  .menu-toggle--open .menu-toggle__bar1 {
+    transform: translate(0, 7px) rotate(-45deg);
+  }
+  .menu-toggle--open .menu-toggle__bar2 {
+    opacity: 0;
+  }
+  .menu-toggle--open .menu-toggle__bar3 {
+    transform: translate(0, -7px) rotate(45deg);
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 750px) {
+    .nav {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      padding: 0 2rem;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav__links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    .nav__links--open {
+      display: flex;
+    }
+  
+    .nav__links li {
+      width: 100%;
+      margin: 0;
+    }
+  
+    .nav__links li a {
+      padding: 1rem;
+      text-align: left;
+    }
+  }
+  /* END OF NAVIGATION */
+
+/******** BUTTON **********/
+
+/* Explore button on home page */
+
+button.main {
+    color: #FF6B6B;
+    background-color: #FFFFFF;
+    border: 3px solid #FF6B6B;
+    padding: 10px 25px;
+    margin-top: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  button.main:hover {
+    background-color: #FF6B6B;
+    color: #FFFFFF;
+  }
+
+/* END OF BUTTON */
+
+
+/******************************** ABOUT PAGE *****************************/
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2px 2fr;
+    gap: 2em;
+    align-items: start;
+}
+
+.about-image {
+    width: 100%;
+    border-radius: 50px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 50rem;
+    justify-self: center;
+}
+
+.vertical-separator {
+    background-color: #E1E4E8;
+    width: 2px;
+    height: 98%;
+}
+
+@media screen and (max-width: 750px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-image {
+        height: 250px;
+        width: auto;
+    }
+    .vertical-separator {
+        display: none;
+    }
+}
