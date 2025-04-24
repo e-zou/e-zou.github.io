@@ -481,7 +481,7 @@ button.main-button:hover {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  column-gap: 1.5rem;
 }
 
 /* Grid container for the 4 project details */
