@@ -85,10 +85,37 @@ function setupWaveToggle() {
   });
 }
 
+// 4. Animate Hand Wave
+function setupHandWave() {
+  // Select all elements with the 'hand-wave' class
+  const waveElements = document.querySelectorAll('.hand-wave');
+
+  // Function to trigger the hand wave animation
+  function triggerWave(event) {
+    const waveEmoji = event.target; // The clicked element
+
+    // Remove the animation class (if any) to reset the animation
+    waveEmoji.classList.remove('waving');
+
+    // Trigger a reflow (forced to restart animation)
+    void waveEmoji.offsetWidth; // This line forces the reflow
+
+    // Add the class to start the animation
+    waveEmoji.classList.add('waving');
+  }
+
+  // Add an event listener to all elements with the 'hand-wave' class
+  waveElements.forEach((waveElement) => {
+    waveElement.addEventListener('click', triggerWave);
+  });
+}
+
+
 // Initialize all on DOM ready
 document.addEventListener("DOMContentLoaded", () => {
   setupMenuToggle();
   setCurrentYear();
   setupSectionHighlighter();
   setupWaveToggle();
+  setupHandWave();
 });
