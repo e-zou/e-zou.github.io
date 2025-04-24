@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -8,37 +9,41 @@
     <link rel="icon" href="./assests/logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
-  <body>
+
+<body>
     <header>
         <nav class="nav" role="navigation" aria-label="Main site navigation">
             <a href="index.html" class="nav__logo">
                 <img src="assests/logo.png" alt="EZ logo">
             </a>
-            <ul class="nav__links" id="nav-links">
-                <li><a href="index.html#featured-projects">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="https://www.linkedin.com/in/emily-zou">Contact</a></li>
-            </ul>
             <button id="menu-toggle" class="menu-toggle" onclick="togglemenu()" aria-label="Toggle menu">
                 <div class="menu-toggle__bar1"></div>
                 <div class="menu-toggle__bar2"></div>
                 <div class="menu-toggle__bar3"></div>
             </button>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="index.html#featured-projects">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://www.linkedin.com/in/emily-zou">Contact</a></li>
+            </ul>
+
         </nav>
     </header>
     <main>
         <section class="section-hero">
             <h1><span class="hand-wave">👋</span><br>
                 Hi, I’m Emily Zou. <br>
-                I’m a UX Researcher & Designer that creates clear, kind, and human-centered designs that genuinely matter.
+                I’m a UX Researcher & Designer that creates clear, kind, and human-centered designs that genuinely
+                matter.
             </h1>
         </section>
         <!--Waves Container-->
         <div class="wave-container">
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                 <defs>
-                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                 </defs>
                 <g class="parallax">
                     <use xlink:href="#gentle-wave" x="28" y="0" fill="rgba(176, 224, 230, 0.4)" />
@@ -47,13 +52,14 @@
                     <use xlink:href="#gentle-wave" x="28" y="7" fill="rgba(190, 230, 255, 0.5)" />
                 </g>
             </svg>
-        </div>  
+        </div>
         <hr>
         <section class="section-projects" id="featured-projects">
             <article class="project-1-card">
                 <h3 class="blue-text">Booz Allen Hamilton</h3>
-                <h2>Bridging the gap between  medical device regulators and manufacturers</h2>
-                <p>I led the research and design to improve a regulatory interaction program during the medical device’s journey from ideation to U.S. market launch.</p>
+                <h2>Bridging the gap between medical device regulators and manufacturers</h2>
+                <p>I led the research and design to improve a regulatory interaction program during the medical device’s
+                    journey from ideation to U.S. market launch.</p>
                 <a href="project1.html">
                     <button class="main-button">Explore</button>
                 </a>
@@ -62,7 +68,8 @@
             <article class="project-2-card">
                 <h3 class="blue-text">ApplyGrad @ Carnegie Mellon University</h3>
                 <h2>Reimagining the enterprise admission review workflow </h2>
-                <p>I led the research & redesign of a legacy graduate review interface to more efficiently process thousands of applications to Carnegie Mellon University’s School of Computer Science.</p>
+                <p>I led the research & redesign of a legacy graduate review interface to more efficiently process
+                    thousands of applications to Carnegie Mellon University’s School of Computer Science.</p>
                 <a href="project2.html">
                     <button class="main-button">Explore</button>
                 </a>
@@ -71,10 +78,11 @@
         <hr>
     </main>
     <footer>
-        <p>Hand-stitched together with code, love, and a dash of curiosity. Thanks for visiting! 💫🛠️ ♥ <br>
-            © <span id="copyright-year"> </span> Emily Zou 
+        <p>Thanks for visiting! This was hand-stitched together with code, love, and <span class="gradient-text">a dash of curiosity.</span> 💫🛠️ ♥ <br>
+            © <span id="copyright-year"> </span> Emily Zou
         </p>
     </footer>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
