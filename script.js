@@ -14,3 +14,21 @@ document.addEventListener("DOMContentLoaded", () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 });
+
+// Animating Waves
+const animatedElements = document.querySelectorAll('.parallax > use');
+let allAnimating = true;
+
+animatedElements.forEach(el => {
+    el.addEventListener('click', () => {
+      allAnimating = !allAnimating;
+      animatedElements.forEach(item => {
+        if (allAnimating) {
+          item.style.animationPlayState = 'running';
+        } else {
+          item.style.animationPlayState = 'paused';
+        }
+      });
+    });
+  });
+  
