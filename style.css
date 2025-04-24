@@ -363,6 +363,7 @@ iframe {
 /* Explore button on home page */
 
 button.main-button {
+    font-weight: 700;
     color: #FF6B6B;
     background-color: #FFFFFF;
     border: 3px solid #FF6B6B;
@@ -489,8 +490,12 @@ button.main-button {
     padding: 1rem;
     border-left: 2px solid #eee;
     border-radius: 0.5rem;
+    color: black;
   }
-  
+  .project-nav a.active {
+    color: #E76F51;
+    border-left-color: #E76F51;
+  }
   /* Vertical nav styling */
   .project-nav ul {
     list-style: none;
