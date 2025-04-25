@@ -571,11 +571,35 @@ button.main-button:hover {
   border-left-color: #E76F51;
 }
 
+.three-blocks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.three-blocks > div {
+  width: 100%;
+  background-color: #eee;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.three-blocks > div > p {
+  margin: 0;
+}
+
 /* Responsive grid for the project details */
 @media (min-width: 600px) {
   .project-overview {
     grid-template-columns: 1fr 1fr;
     /* 2 columns for midsize screens */
+  }
+  .three-blocks {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -605,7 +629,7 @@ button.main-button:hover {
   grid-column: 1 / -1;
 }
 
-/* END OF PROJECT PAGES */
+/***** END OF PROJECT PAGES *******/
 
 /******** WAVES ANIMATION *********/
 

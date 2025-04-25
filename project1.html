@@ -51,7 +51,7 @@
             </div>
             <div class="project-details">
                 <p class="project-details__label"><strong>Tools</strong></p>
-                <p>Sketch, MS Suite, Zoom</p>
+                <p>Sketch, Microsoft Office Suite, Zoom, Jira</p>
             </div>
             <div class="project-details">
                 <p class="project-details__label"><strong>Skills</strong></p>
@@ -63,81 +63,223 @@
             <div class="project-content">
                 <section class="overview" id="overview">
                     <h2>Overview</h2>
+                    <h3>Problem</h3>
                     <p>
-                        Most of my work focuses on building communication tools that would improve real-time
-                        interactions, conversation tracking across multiple legacy applications, and long-term
-                        interaction trends. High-quality communication between FDA and device manufacturers is
-                        associated with improvements in medical devices, resulting in the U.S. market having access
-                        safer and more effective products.
+                        High-quality communication between FDA and device manufacturers is associated with improvements in medical devices, resulting in the U.S. market having access safer and more effective products. Traditionally, medical device developers communicate with FDA by physically mailing in parcels of device information and creating dozens of different email threads with various attachments. This decentralized communication process hampers collaboration to develop quality medical devices. 
                     </p>
-                    <h3>Results & Impact</h3>
+                    <h3>Results & impact</h3>
                     <p>
                         Because I was involved as both a researcher and designer, I was able to create designs and
                         measure it’s impact on business strategy. Across the various projects, I created products that:
                     </p>
                     <ol>
-                        <li>Improved the user level of ease scores, improving overall usability </li>
-                        <li>Reduced tool-switching friction, resulting an increase in efficiency</li>
-                        <li>Increased potential user loyalty to the program, fulfilling long-term retention goals</li>
+                        <li>Improved the user level of ease scores by 13%, which indicates increase in usability </li>
+                        <li>Reduced tool-switching friction by 25%, resulting an increase in efficiency</li>
+                        <li>Satisfied potential user loyalty of at least 60%, fulfilling long-term retention goals</li>
                     </ol>
                 </section>
-                <section class="project-content-section" id="notable-highlights">
-                    <h2>Notable Highlights</h2>
-                    <h3>Conducted interviews</h3>
+                <section class="project-content-section" id="phase-1">
+                    <h2>Phase 1: Uncover the Problem</h2>
+                    <h3>Optimizing communication is a shared goal</h3>
                     <p>
-                        I led discovery interviews with 4 users to understand key problems and get feedback about the
-                        current process of communication. Below is a quote from a real user of the system. It highlights
-                        the importance of efficient collaboration and commmunication.
+                        More frequent interactions with the FDA often leads to better devices. FDA users desired to see their communications more closely tied to the device and various FDA programs and reviews that it has gone through. It is valuable for device manufacturer teams to connect directly with the FDA device review teams, but also to conversations and programs involved in the device's total lifecycle.
                     </p>
                     <blockquote class="quote">
                         “ Industry users and FDA have the same goals. We both want to get the product to market as
                         quickly and using the least resources as possible to get the submissions reviewed and
                         completed.”
-                        <cite>- User</cite>
+                        <cite>- User highlights that communication improvement is part of a larger, mutual goal</cite>
                     </blockquote>
-                    <h3>Evaluated messaging prototypes</h3>
+                    <h3>Three user needs that design needs to fulfill</h3>
                     <p>
-                        I led usability testing of a threaded messaging prototype with 10 users in order to create
-                        initial UI designs that addressed the problems.
+                        After conducting multiple interviews with our users, studying past desk research, and playing in the sandbox environments, our team grouped our insights and established three user needs : 
+                    </p>
+                    <div class="three-blocks">
+                        <div>
+                            <p>Users need real-time communication so that they can proactively address problems.</p>
+                        </div>
+                        <div>
+                            <p>Users need to track and consolidate all device development conversations.</p>
+                        </div>
+                        <div>
+                            <p>Users need ways to request for help or resources while working on their device.</p>
+                        </div>
+                    </div>
+                    <h3>Identifying user needs with thorough research</h3>
+                    <p>In order to prevent delays and reduce risk when developing a system, we have to understand the current workflow of FDA reviewers and medical device developers. 
+                        I conducted <strong>desk research</strong> by sifting through dozens of past user sessions to understand the legacy systems that reviewers worked in and to avoid repeating work. 
+                        I also familiarized myself with the reviewer's work applications by using <strong>sandbox environments</strong>, so that I could understand the users' perspective better. In addition, 
+                        I conducted <strong>one-on-one interviews</strong> with four FDA users to validate ideas about how to re-imagine their communication workflow. 
                     </p>
                     <figure>
-                        <img src="assests/project 1/Usability Testing Summary.png" alt="usability test results"
+                        <img src="assests/project 1/Journey Map.png" alt="Journey map of a medical device review process"
                             style="width:100%">
                         <figcaption>
-                            This was the results of the usability test of a threaded messaging prototype. Based on these
-                            insights, I wrote a report and created new iterations of mockups that could address the the
-                            most critical pain points.
+                            I created a generic journey map based on public information to illustrate how FDA reviewers and device developers typically communicate during medical device development. Many details have been simplified or redacted, so it's meant more as a rough sketch than an exact representation.
                         </figcaption>
-                    </figure>
-                    <h3>Created enterprise communication features</h3>
-                    <p>
-                        I designed a consolidated interactions tracking log for multi-channel communications from
-                        multiple legacy integrations.
-                    </p>
-                    <figure>
-                        <img src="assests/project 1/Summary Log.png" alt="communications log" style="width:100%">
-                        <figcaption>
-                            This is a simplified, redacted, low-fi design for consolidating and tracking multi-channel
-                            communications across different apps and tools in one place.
-                        </figcaption>
-                    </figure>
-                    <h3>Designed end-to-end product UIs</h3>
-                    <p>I collaborated with business & developers to design a reviewer workflow and system to track
-                        long-term interactions for the full journey of a medical device to the U.S. market. </p>
-                    <figure>
-                        <img src="assests/project 1/Pega Constellation.png" alt="Pega Constellations Design System"
-                            style="width:100%">
-                        <figcaption>
-                            This is a generic and public template of a Pega Constellation design system, which is very
-                            similar in terms of components and complexity of the interfaces that I design. </figcaption>
                     </figure>
                 </section>
+                <section class="project-content-section" id="phase-2">
+                    <h2>Phase 2: Exploring Solutions</h2>
+                    <h3>Three different solutions for three different needs</h3>
+                    <p>
+                        There are always multiple solutions to address the different user need: need for real-time communication, tracking communications, and requesting for help. Working with the business and developers, we decided to translate each need into it’s own design because each need was different enough that a single fix wouldn’t work. This helped us stay aligned, reduce confusion, and build solutions that directly solved the right problems.
+                    </p>
+                    <h3>Usability testing the threaded messaging rapid prototype for real-time interactions</h3>
+                    <p>
+                        I worked with the developers to evaluate the effectiveness of a messaging rapid prototype. I scheduled, interviewed, moderated, and took notes for each of the 5 user sessions with FDA users. I guided them through the tasks, which involved finding messages from industry users, composing messages, and searching through messages for answers. As they walk through the tasks, I asked them to think aloud and tracked their behaviors (e.g., how quickly they completed each task, self-reported satisfaction of each task, etc.) and probed them to find the "why" behind their answers.
+                    </p>
+                    <p>
+                        I found that FDA users had the most difficulty locating messages and understanding who had access to the messages. My re-designs focused on creating a clear navigational path to messages and clarifying the visibility of messages.
+                    </p>
+                    <figure>
+                        <img src="assests/project 1/Usability Testing Summary.png" alt="Usability testing summary"
+                            style="width:100%">
+                        <figcaption>
+                            This was the results of the usability test of a threaded messaging prototype. Based on these insights, I wrote a report and created new iterations of mockups that could address the the most critical pain points. 
+                        </figcaption>
+                    </figure>
+                    <h3>Prototyping & testing a summary log for tracking multi-channel legacy integrations</h3>
+                    <p>
+                        I worked with clients on developing a proposal for centralizing interactions. I used <strong>informal, collaborative peer-review</strong> to co-design the solution with 
+                        5 other people from the business & UX team. Over a few months, I led design discussions and created wireframes on screen. We would use methods like <strong>dot 
+                         voting, focus groups, & ideation sessions</strong> to find the best solution. From their feedback, I was able to iteratively adapt the designs to better accommodate user needs.
+                    </p>
+                    <figure>
+                        <img src="assests/project 1/Omnichannel Comms.png" alt="Omnichannel communications"
+                            style="width:100%">
+                        <figcaption>
+                            The nature of communication between FDA and device developers can take many places and there are many people involved. It’s diffcult to track a singular source of truth and complete history of conversations.
+                        </figcaption>
+                    </figure>
+                    <h3>Creating & user testing a new request workflow</h3>
+                    <p>
+                        In order to address device developer need for special communication requests, I worked with a product team through <strong>Jira</strong> to develop an end-to-end web app solution. 
+                        I designed UIs for a pilot program that could help track long-term interaction requests. I analyzed feedback from <strong>user testing</strong> sessions with 25 FDA reviewer. 
+                        I studied how they accepted and fulfilled requests from users through the systems and then iterated upon the designs. I also designed web forms for device developers to send forms in.
+                    </p>
+                    <figure>
+                        <img src="assests/project 1/Pega Constellation.png" alt="Pega constellation design system example"
+                            style="width:100%">
+                        <figcaption>
+                            This is a generic template from the Pega Constellation design system, which is similar to how complex designing for reviewing communication requests can be. Data must be sent in an then reorganized across many tabs. In addition, there are specific tasks and deadlines for every request that must be tracked. (Courtesy of Pega Constellation)
+                        </figcaption>
+                    </figure>
+                </section>
+                <section class="project-content-section" id="phase-3">
+                    <h2>Phase 3: Evaluate Designs</h2>
+                    <p>
+                        Ultimately, all three solutions was supported by evidence from user testing, so the teams continued to develop for all three scenarios. As there was more design and research demands: 
+                    </p>
+                    <ul>
+                        <li>
+                            I wrapped up my work for the messaging prototype by delivering a full research report and minimally-viable product design solutions to improve it. 
+                        </li>
+                        <li>
+                            I created a comprehensive PDF with high-fidelity designs and documentation for additional features to explore.
+                        </li>
+                        <li>
+                            I delivered multiple high-fidelity design assets for the FDA reviewer tracking interactions workflow, which supported cross-functional alignment and accelerated handoff to development.
+                        </li>
+                    </ul>
+                    <h3>Measuring outcomes</h3>
+                    <ol>
+                        <li>
+                            When testing the messaging system, we were able to see a 13% improvement in user satisfaction scores. Based on historical data of 15 users, we calculated a benchmark of 67% satisfaction with the communication in the current system. Compared to the usability test we conducted with 10 users, which had an average satisfaction score of 80%, we saw a 13% improvement from the baseline. 
+                        </li>
+                        <li>
+                            The summary log prototype was able to reduce 25% in tool-switching friction. Past studies on a similar tool in the legacy system showed that users on average were switching ~12 times between various documents and tools to record data. With the new summary log, people on average were switching ~9 times, drastically reducing the need to add longer notes in other programs.
+                        </li>
+                        <li>
+                            Developing a long-term interactions program was able to get 60% of user loyalty to the platform. While long-term retention data wasn’t available due to the early stage of developing the program, 60% of test participants expressed strong intent to use the new workflow regularly. These are strong indicators of potential user loyalty.
+                        </li>
+                    </ol>
+                </section>
+                <section class="project-content-section" id="final">
+                    <h2>Final Design Choices</h2>
+                    <p>
+                        The images below are not associated with the FDA. They just show similar design ideas and the kind of complex flows I may have worked on.
+                    </p>
+                    <h3>Threaded messaging prototype</h3>
+                    <p>
+                        For the threaded messaging prototype, I focused on design choices that support real-time interactions while keeping conversations clear and organized. Features included:
+                    </p>
+                    <ul>
+                        <li>
+                            Threaded messages grouped and ordered so it’s easier to find responses
+                        </li>
+                        <li>
+                            Subtle timestamps and indicators keep users aware of activity
+                        </li>
+                        <li>
+                            Clean visual hierarchy reduces clutter and supports quick scanning
+                        </li>
+                        <li>
+                            Ongoing conversations next to submission information for understanding context
+                        </li>
+                    </ul>
+                    <figure>
+                        <img src="assests/project 1/Notion Mailbox.png" alt="Notion mail inbox view"
+                            style="width:100%">
+                        <figcaption>
+                            This is an illustration of Notion Mail, which contains many features that I had to test and design for such as opening messages, sending messages, and finding specific messages. (Courtesy of Notion Mail)
+                        </figcaption>
+                    </figure>
+                    <h3>Multi-channel communication log</h3>
+                    <p>
+                        I improved a multi-channel communication summary log to make it easier for users to track conversations across platforms. The updated design brings clarity to scattered messages by organizing them in one place, highlighting key actions, and reducing information overload.
+                    </p>
+                    <ul>
+                        <li>
+                            Grouped messages by channel and time to improve readability
+                        </li>
+                        <li>
+                            Added filters and tags to quickly find relevant updates
+                        </li>
+                        <li>
+                            Highlighted important actions and follow-ups for better visibility
+                        </li>
+                    </ul>
+                    <figure>
+                        <img src="assests/project 1/Summary Log.png" alt="Communications summary log"
+                            style="width:100%">
+                        <figcaption>
+                            This is a simplified, low-fi design for consolidating and tracking multi-channel communications across different apps and tools in one place. It illustrates how I would collect business requirements and translate them into design requirements.
+                        </figcaption>
+                    </figure>
+                    <h3>Long-term interaction request workflow</h3>
+                    <p>
+                        I improved the design of a long-term interaction request workflow to make it easier for users to plan, submit, and track extended engagements. The updated flow focuses on clarity, reducing back-and-forth, and giving users better visibility into request status and next steps.
+                    </p>
+                    <ul>
+                        <li>
+                            Simplified form inputs and grouped them by task to reduce cognitive load
+                        </li>
+                        <li>
+                            Added progress indicators and status updates for better transparency
+                        </li>
+                        <li>
+                            Designed confirmation screens and alerts to reduce uncertainty and follow-up questions
+                        </li>
+                    </ul>
+                    <figure>
+                        <img src="assests/project 1/Pega Constellation 2.png" alt="Pega constellation table view"
+                            style="width:100%">
+                        <figcaption>
+                            This is a similar example from Pega Constellation, of how I would organize information about interactions in a table and organize tasks on the screen for users. 
+                        </figcaption>
+                    </figure>
+                </section>
+
             </div>
             <nav class="project-nav" aria-label="Secondary navigation">
                 <ul>
                     <li><strong>TABLE OF CONTENTS</strong></li>
                     <li><a href="#overview">Overview</a></li>
-                    <li><a href="#notable-highlights">Notable Highlights</a></li>
+                    <li><a href="#phase-1">Uncover the Problem</a></li>
+                    <li><a href="#phase-2">Exploring Solutions</a></li>
+                    <li><a href="#phase-3">Evaluate Design</a></li>
+                    <li><a href="#final">Final Design Choice</a></li>
                 </ul>
             </nav>
         </div>
