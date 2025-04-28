@@ -424,6 +424,56 @@ button.main-button:hover {
 
 /* END OF BUTTON */
 
+/******************************** INDEX PAGE *****************************/
+
+.project-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  column-gap: 2rem;
+}
+
+.project-card > img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  margin-bottom: 2rem;
+}
+
+.three-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  column-gap: 2rem;
+}
+
+.three-card-grid > .card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.three-card-grid > .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .three-card-grid {
+    row-gap: 2rem;
+  }
+  .project-card {
+    row-gap: 2rem;
+  }
+}
+
+
+
+/******************************** END OF PAGE *****************************/
 
 /******************************** ABOUT PAGE *****************************/
 .about-grid {
