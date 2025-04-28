@@ -400,6 +400,13 @@ iframe {
 
 /* END OF NAVIGATION */
 
+/* IFRAME */
+@media (max-width: 600px) {
+  iframe {
+    height: 400px;
+  }
+}
+
 /******** BUTTON **********/
 
 /* Explore button on home page */
