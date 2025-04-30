@@ -110,11 +110,26 @@ function setupHandWave() {
   });
 }
 
+// 5. Scroll back to the top
+function setupBackToTop() {
+  const backToTopBtn = document.getElementById("backToTop");
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
+}
+
 
 // Initialize all on DOM ready
 document.addEventListener("DOMContentLoaded", () => {
   setupMenuToggle();
   setCurrentYear();
+  setupBackToTop();
   setupSectionHighlighter();
   setupWaveToggle();
   setupHandWave();
