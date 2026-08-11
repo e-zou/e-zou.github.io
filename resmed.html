@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Equipcare</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="icon" href="./assests/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav" role="navigation" aria-label="Main site navigation">
+            <a href="index.html" class="nav__logo">
+                <img src="assests/logo.png" alt="EZ logo">
+            </a>
+            <button id="menu-toggle" class="menu-toggle" onclick="togglemenu()" aria-label="Toggle menu">
+                <div class="menu-toggle__bar1"></div>
+                <div class="menu-toggle__bar2"></div>
+                <div class="menu-toggle__bar3"></div>
+            </button>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="index.html#featured-projects">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://www.linkedin.com/in/emily-zou">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="project-overview">
+            <h2>Equipcare</h2>
+            <h1>Generating value with AI & AR/VR for better healthcare</h1>
+            <p>
+                I was the lead mobile apps designer for developing an AI-assisted equipment care app for a healthcare client, ResMed.
+            </p>
+            <div class="project-details">
+                <p class="project-details__label"><strong>Role</strong></p>
+                <p>Lead product designer</p>
+            </div>
+            <div class="project-details">
+                <p class="project-details__label"><strong>Timeline</strong></p>
+                <p>Feb 2024 - Mar 2025<br> (2 weeks)</p>
+            </div>
+            <div class="project-details">
+                <p class="project-details__label"><strong>Tools</strong></p>
+                <p>Figma, Slack, Discord</p>
+            </div>
+            <div class="project-details">
+                <p class="project-details__label"><strong>Skills</strong></p>
+                <p>Pop-up Research, Stakeholder Map, Design Brief, Mobile Design</p>
+            </div>
+        </section>
+        <hr>
+        <div class="project-body">
+            <div class="project-content">
+                <section class="overview" id="overview">
+                    <h2>Overview</h2>
+                    <h3>Problem</h3>
+                    <p>
+                       One of ResMed’s long term goals is to improve the quality of out-of-hospital care and find a new customers to generate revenue. EquipCare shifts ResMed's relationship with customers from a one-time equipment purchase to an ongoing digital experience—helping users care for the equipment they already own while creating natural opportunities to discover what ResMed can offer next.
+                    </p>
+                    <h3>Solution</h3>
+                    <p>
+                        We delivered a proof-of-concept, EquipCare, which transforms equipment maintenance from a task users have to remember into an interactive experience that keeps ResMed connected to them throughout the lifecycle of their equipment. This is what our product offers:
+                        <ul>
+                            <li>Reach new customers by offering useful equipment-care and educational tools that can introduce people to ResMed before they become customers.</li>
+                            <li>Leverage AR/VR technology to recommend cleaning, maintenance, & upkeep, turning everyday equipment maintenance into an entry point to the broader ResMed ecosysteme</li> 
+                            <li>Simplify the path to purchase by connecting maintenance recommendations directly to relevant ResMed products, creating a seamless journey from identifying a need to finding the right solution</li>
+                        </ul>
+                    </p>
+                </section>
+                <section class="project-content-section" id="discover">
+                    <h2>Discover</h2>
+                    <h3>Understanding the problem space and the people involved</h3>   
+                    <p>
+                        We began by learning about ResMed, sleep apnea, and the broader respiratory-care ecosystem. Through secondary research and conversations with a sleep apnea caregiver, we uncovered the complexity involved in maintaining CPAP equipment.
+                    </p> 
+                    <p>
+                        Our research revealed that equipment maintenance was more than a simple reminder problem. Patients and caregivers had to keep track of cleaning, replacement schedules, troubleshooting, and other equipment-related tasks—creating significant cognitive load.
+                    </p>
+                    <p>
+                        I synthesized our findings into a stakeholder map to understand the relationships between patients, caregivers, healthcare providers, businesses, and government organizations.
+                    </p>
+                    <p>
+                        Key insight: Equipment maintenance was a recurring burden with many moving parts, creating an opportunity to simplify the experience.
+                    </p>
+                    <figure>
+                        <img src="assests/resmed/ecosystem.png" alt="Stakholeder ecosystem map"
+                            style="width:100%">
+                        <figcaption>
+                            This is a stakeholder ecosystem map, that maps the different stakeholders & domains involved with the product's process. I created this map to understand the value that the company can generate for its customers. From here, our team identified that patients were the most value source of income for the company.
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assests/resmed/user quotes.png" alt="User quotes"
+                            style="width:100%">
+                        <figcaption>
+                           I've highlighted a few quotes from users above. Talking to users helped us identify that equipment care is valuable for customer retention.
+                        </figcaption>
+                    </figure>
+                </section>
+                <section class="project-content-section" id="evaluate">
+                    <h2>Evaluate</h2>   
+                    <h3>Turning research into an opportunity</h3> 
+                    <p>
+                        Our initial concept focused on helping patients manage equipment replacement dates and sleep-apnea-related appointments. We explored the idea through sketches and early wireframes. However, critique revealed that a traditional task-management experience wasn't taking full advantage of the possibilities of a mobile service. It also attempted to solve too broad a problem
+                    </p>
+                    <p>
+                        We stepped back and evaluated what could create more meaningful value for patients while also supporting ResMed's goals. This led to an important pivot: From managing equipment-related tasks manually, to using data from equipment and mobile devices to proactively manage equipment maintenance. We narrowed our focus from general equipment management to cleaning, allowing us to explore a more specific and meaningful problem.
+                    </p>
+                    <figure>
+                        <img src="assests/resmed/low-fis.png" alt="low-fi, mid-fi, and information architecture design"
+                            style="width:100%">
+                        <figcaption>
+                            Pictures & sketches of what the information architecture & user flow should look like in low-fi.
+                        </figcaption>
+                    </figure>
+                </section>
+                <section class="project-content-section" id="design">
+                    <h2>Design</h2>   
+                    <h3>Desinging a proactive equipment-care experience</h3> 
+                    <p> 
+                        With our direction established, we designed EquipCare around the idea of making equipment maintenance more proactive and less dependent on users remembering what to do. We explored how mobile capabilities—including the camera, sensors, and augmented reality could collect information about a patient's equipment and translate it into useful actions.                    
+                    </p>
+                    <p>
+                        We stepped back and evaluated what could create more meaningful value for patients while also supporting ResMed's goals. This led to an important pivot: From managing equipment-related tasks manually, to using data from equipment and mobile devices to proactively manage equipment maintenance. We narrowed our focus from general equipment management to cleaning, allowing us to explore a more specific and meaningful problem.
+                    </p>
+                    <figure>
+                        <img src="assests/resmed/low-fis.png" alt="low-fi, mid-fi, and information architecture design"
+                            style="width:100%">
+                        <figcaption>
+                            Pictures & sketches of what the information architecture & user flow should look like in low-fi.
+                        </figcaption>
+                    </figure>
+                </section>
+
+            </div>
+            <nav class="project-nav" aria-label="Secondary navigation">
+                <ul>
+                    <li><strong>TABLE OF CONTENTS</strong></li>
+                    <li><a href="#overview">1. Overview</a></li>
+                    <li><a href="#discover">2. Discover</a></li>
+                    <li><a href="#evaluate">3. Evaluate</a></li>
+                    <li><a href="#design">4. Design</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr>
+        <section class="back-to-top">
+            <button id="backToTop" title="Go back to the top of the website">
+                <span>↑ Go up</span>
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Thanks for visiting! This was hand-stitched together with code, love, and a dash of curiosity. 💫🛠️ ♥ <br>
+            <span class="gradient-text">© <span id="copyright-year"> </span> Emily Zou</span>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

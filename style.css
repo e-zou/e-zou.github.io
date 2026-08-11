@@ -455,11 +455,12 @@ button.main-button:hover {
 
 .project-card {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   column-gap: 2rem;
+  width: 100%;
 }
 
-.project-card > img {
+.project-card>img {
   width: 100%;
   height: auto;
   border: 1px solid #ddd;
@@ -472,7 +473,7 @@ button.main-button:hover {
   column-gap: 2rem;
 }
 
-.three-card-grid > .card {
+.three-card-grid>.card {
   background: #ffffff;
   border: 1px solid #ddd;
   border-radius: 1rem;
@@ -482,7 +483,7 @@ button.main-button:hover {
 }
 
 
-.three-card-grid > .card img {
+.three-card-grid>.card img {
   width: 100%;
   height: auto;
   border-radius: 0.75rem;
