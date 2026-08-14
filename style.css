@@ -225,26 +225,13 @@ h1, h2, h3, h4, h5, p {
 
 /******** CONTAINERS ********/
 main, footer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding: 0 10rem;
 }
 
 main {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-}
-
-main>section,.project-body, hr{
-  padding: 0 10rem;
-  max-width: 1400px;
-}
-
-main>hr {
-  width: 100%;
 }
 
 footer {
@@ -568,7 +555,7 @@ button.main-button:hover {
 
 /* Layout the 4 boxes in a grid */
 .project-overview {
-  /* max-width: 1000px; */
+  max-width: 1000px;
   width: 100%;
   margin: 0;
   display: grid;
