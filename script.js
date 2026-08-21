@@ -91,22 +91,27 @@ function setupHandWave() {
   const waveElements = document.querySelectorAll('.hand-wave');
 
   // Function to trigger the hand wave animation
-  function triggerWave(event) {
-    const waveEmoji = event.target; // The clicked element
-
-    // Remove the animation class (if any) to reset the animation
+  function triggerWave(waveEmoji) {
+    // Remove the animation class to reset the animation
     waveEmoji.classList.remove('waving');
 
-    // Trigger a reflow (forced to restart animation)
-    void waveEmoji.offsetWidth; // This line forces the reflow
+    // Force a reflow so the animation can restart
+    void waveEmoji.offsetWidth;
 
     // Add the class to start the animation
     waveEmoji.classList.add('waving');
   }
 
-  // Add an event listener to all elements with the 'hand-wave' class
   waveElements.forEach((waveElement) => {
-    waveElement.addEventListener('click', triggerWave);
+
+    // Wave once automatically when the page loads
+    triggerWave(waveElement);
+
+    // Wave again whenever the user clicks
+    waveElement.addEventListener('click', () => {
+      triggerWave(waveElement);
+    });
+
   });
 }
 
