@@ -70,7 +70,42 @@ function setupSectionHighlighter() {
   onScroll(highlightNav);
 }
 
-// 4. Animate Hand Wave
+// 4. Pause/Play Hero GIF on Click
+function setupHeroGifToggle() {
+  const gif = document.getElementById("hero-gif");
+  if (!gif) return;
+
+  const canvas = document.createElement("canvas");
+  canvas.setAttribute("aria-hidden", "true");
+  canvas.style.display = "none";
+  gif.insertAdjacentElement("afterend", canvas);
+
+  const ctx = canvas.getContext("2d");
+  let paused = false;
+
+  function pauseGif() {
+    canvas.width = gif.naturalWidth;
+    canvas.height = gif.naturalHeight;
+    ctx.drawImage(gif, 0, 0);
+    canvas.style.display = "block";
+    gif.style.visibility = "hidden";
+  }
+
+  function playGif() {
+    canvas.style.display = "none";
+    gif.style.visibility = "visible";
+  }
+
+  function toggleGif() {
+    paused = !paused;
+    paused ? pauseGif() : playGif();
+  }
+
+  gif.addEventListener("click", toggleGif);
+  canvas.addEventListener("click", toggleGif);
+}
+
+// 5. Animate Hand Wave
 function setupHandWave() {
   // Select all elements with the 'hand-wave' class
   const waveElements = document.querySelectorAll('.hand-wave');
@@ -100,7 +135,7 @@ function setupHandWave() {
   });
 }
 
-// 5. Scroll back to the top
+// 6. Scroll back to the top
 function setupBackToTop() {
   const backToTopBtn = document.getElementById("backToTop");
 
@@ -121,5 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setCurrentYear();
   setupBackToTop();
   setupSectionHighlighter();
+  setupHeroGifToggle();
   setupHandWave();
 });
