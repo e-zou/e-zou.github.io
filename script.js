@@ -70,21 +70,6 @@ function setupSectionHighlighter() {
   onScroll(highlightNav);
 }
 
-// 4. Animate/Toggle Waves
-function setupWaveToggle() {
-  const animatedElements = document.querySelectorAll(".parallax > use");
-  let allAnimating = true;
-
-  animatedElements.forEach(el => {
-    el.addEventListener("click", () => {
-      allAnimating = !allAnimating;
-      animatedElements.forEach(item => {
-        item.style.animationPlayState = allAnimating ? "running" : "paused";
-      });
-    });
-  });
-}
-
 // 4. Animate Hand Wave
 function setupHandWave() {
   // Select all elements with the 'hand-wave' class
@@ -136,6 +121,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setCurrentYear();
   setupBackToTop();
   setupSectionHighlighter();
-  setupWaveToggle();
   setupHandWave();
 });

@@ -47,7 +47,8 @@ body {
 
 hr {
   border: 1px solid #E1E4E8;
-  margin: 55px 0px;
+  width: 100%;
+  margin: 2rem 0;
 }
 
 /* Base list styles */
@@ -225,7 +226,12 @@ h1, h2, h3, h4, h5, p {
 
 /******** CONTAINERS ********/
 main, footer {
-  padding: 0 10rem;
+  padding: 0 0rem;
+}
+
+main > section {
+  padding: 2rem 10rem;
+  width: 100%;
 }
 
 main {
@@ -242,6 +248,7 @@ footer {
   background-color: #F7F9FC;
   color: #8D929B;
   height: 10rem;
+  padding: 0 10rem;
 }
 
 footer>p {
@@ -253,9 +260,16 @@ iframe {
   height: 100vh;
 }
 
-@media screen and (max-width: 750px) {
-  main, footer {
-    padding: 2rem 2rem;
+/* Shrink every top-level section's side padding together on mobile */
+@media (max-width: 768px) {
+  main > section {
+    padding: 2rem;
+  }
+
+  footer {
+    height: auto;
+    min-height: 10rem;
+    padding: 2rem;
   }
 }
 
@@ -453,18 +467,91 @@ button.main-button:hover {
 
 /******************************** INDEX PAGE *****************************/
 
+.section-hero {
+  background-image: url('assests/hero/bg_lines.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 160px;
+}
+
+.hero-image {
+  width: 70%;
+}
+
+.hero-image>img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .section-hero {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-height: 40vh;
+  }
+
+  .hero-image>img {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    max-height: 40vh;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+}
+
+.section-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .project-card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  column-gap: 2rem;
+  column-gap: 2.5rem;
   width: 100%;
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
 }
 
 .project-card>img {
   width: 100%;
   height: auto;
-  border: 1px solid #ddd;
+  border-radius: 1rem;
   margin-bottom: 2rem;
+}
+
+.project-card .card-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.project-card .card-content h2 {
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.project-card .card-content p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 .three-card-grid {
@@ -476,19 +563,38 @@ button.main-button:hover {
 
 .three-card-grid>.card {
   background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.three-card-grid>.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+}
 
 .three-card-grid>.card img {
   width: 100%;
   height: auto;
-  border-radius: 0.75rem;
-  margin-bottom: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.three-card-grid>.card h3 {
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.three-card-grid>.card p {
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .project-card,
+  .three-card-grid>.card {
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -545,6 +651,13 @@ button.main-button:hover {
 
 
 /****************************** PROJECT PAGES ****************************/
+
+/* Keep the dividers aligned with the padded sections around them */
+main > hr {
+  width: auto;
+  margin: 2rem 10rem;
+}
+
 .project-overview>h1 {
   margin-bottom: 8px;
 }
@@ -589,6 +702,7 @@ button.main-button:hover {
   grid-template-columns: 3fr 1fr;
   gap: 4rem;
   font-size: 18px;
+  padding: 0 10rem;
 }
 
 
@@ -700,6 +814,16 @@ button.main-button:hover {
   }
 }
 
+@media (max-width: 768px) {
+  .project-body {
+    padding: 0 2rem;
+  }
+
+  main > hr {
+    margin: 2rem;
+  }
+}
+
 /* Optional: Make sure headings & intro span full width */
 .project-overview h1,
 .project-overview h2,
@@ -709,76 +833,6 @@ button.main-button:hover {
 }
 
 /***** END OF PROJECT PAGES *******/
-
-/******** WAVES ANIMATION *********/
-
-.wave-container {
-  margin: 50px 0px;
-  width: 100%;
-}
-
-.waves {
-  width: 100%;
-}
-
-.parallax>use {
-  animation-name: move-forever;
-  animation-timing-function: cubic-bezier(.55, .5, .45, .5);
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
-  animation-play-state: running;
-  width: 100%;
-}
-
-.parallax>use.animate {
-  animation-play-state: running;
-}
-
-.parallax>use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 10s;
-}
-
-.parallax>use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 13s;
-}
-
-.parallax>use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 16s;
-}
-
-.parallax>use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 23s;
-}
-
-@keyframes move-forever {
-  0% {
-    transform: translate3d(-90px, 0, 0);
-  }
-
-  100% {
-    transform: translate3d(85px, 0, 0);
-  }
-}
-
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-  .waves {
-    height: 6rem;
-    min-height: 6rem;
-    width: 100%;
-  }
-
-  .content {
-    height: 30vh;
-  }
-}
-
-/* END OF WAVES ANIMATION */
-
 
 /*********** HAND WAVE ANIMATION ***********/
 .hand-wave {
