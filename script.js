@@ -175,7 +175,20 @@ function setupRoleCycler() {
   startCycle();
 }
 
-// 7. Scroll back to the top
+// 7. Pause/Play Logo Marquee on Click
+function setupLogoMarqueeToggle() {
+  const track = document.getElementById("logoMarqueeTrack");
+  if (!track) return;
+
+  let paused = false;
+
+  track.parentElement.addEventListener("click", () => {
+    paused = !paused;
+    track.style.animationPlayState = paused ? "paused" : "running";
+  });
+}
+
+// 8. Scroll back to the top
 function setupBackToTop() {
   const backToTopBtn = document.getElementById("backToTop");
 
@@ -199,4 +212,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setupHeroGifToggle();
   setupHandWave();
   setupRoleCycler();
+  setupLogoMarqueeToggle();
 });
