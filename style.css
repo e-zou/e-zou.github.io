@@ -945,6 +945,41 @@ main > hr {
   margin: 3rem 0;
 }
 
+/* Placeholder for a not-yet-available image or asset */
+.placeholder-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  max-width: 320px;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  background: #F7F9FC;
+  border: 2px dashed #C7CCD4;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.placeholder-box p {
+  color: var(--color-caption);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.placeholder-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.placeholder-row .placeholder-box {
+  flex: 1 1 240px;
+  margin: 0;
+}
+
 /* Layout the 4 boxes in a grid, as a card floating above the hero */
 .project-overview {
   width: auto;

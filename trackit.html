@@ -32,7 +32,10 @@
         <section class="case-study-hero">
             <div class="case-study-hero__text">
                 <h1>TrackIt</h1>
-                <h2>Building notifications for task tracking</h2>
+                <h2>Building enterprise notifications system for task tracking</h2>
+                <a href="#prototype">
+                    <button class="main-button">View Prototype</button>
+                </a>
             </div>
             <div class="case-study-hero__showcase">
                 <div class="device-frame device-frame--desktop">
@@ -65,14 +68,14 @@
                 <section class="overview" id="Overview">
                     <h2>Overview</h2>
                     <p>
-                        I owned the end-to-end design of a notification systems on a task management platform. This improved workflow efficiency for analysts by 33%. Due to the nature of my NDA, I can not share real working products or names of the project. Therefore, the information in here has been obfuscated and re-created to be more general. Please reach out if you are interested in hearing more.
+                        I owned the end-to-end design of a notification system on a task management platform that’s built from 0->1. I improved workflow efficiency for analysts by 33%. Due to the nature of my NDA, I cannot share real working products or names of the project. Therefore, the information in here has been obfuscated and re-created to be more general. Please reach out if you are interested in hearing more.
                     </p>
                     <h3>Problem</h3>
                     <p>
                         Users received notifications across multiple touchpoints, making it difficult to keep track of updates and determine which required immediate attention. Important alerts were easily overlooked, while less critical messages created unnecessary noise. The experience lacked clear prioritization and efficient ways to review or act on notifications.
                     </p>
                     <h3>Solution & Impact</h3>
-                    <p>For the system, I created notifications, from low-fis to high-fis. It was part of the iniative to make analyst workflows 33% faster and more efficient than before. Here's what I did: </p>
+                    <p>For the system, I created notifications, from low-fis to high-fis. It was part of the initiative to make analyst workflows 33% faster and more efficient than before. Here's what I did: </p>
                     <ol>
                         <li>Create a single source of truth for notifications</li>
                         <li>Helped users quickly get to high-priority updates</li>
@@ -82,74 +85,107 @@
                 </section>
                 <section class="project-content-section" id="Discover">
                     <h2>Phase 1: Discovery</h2>
-                    <h3>Notifications are part of the bigger iniative to improve analyst workflows.</h3>
-                    <h4>Background</h4>
                     <p>
-                        For this project, I collaborated with 2 other designers and 1 UX researcher to learn about the goals of the notification center. This was a 0 to 1 project for modernizing the workflow for hundreds of analysts. I was brought on to help bring notifications, one specific feature, in end-to-end.
+                        Our users are analysts working on multiple projects with competing deadlines. They need to juggle with multiple projects, use legacy tools, & have different systems to track for different projects.
+                    </p>
+                    <h3>Our users have a fragmented task-tracking experience</h3>
+                    <p>
+                        In order to keep track of various schedules on different projects, users use different systems. Some projects can be kept on Jira, but most others are on different platforms or spreadsheets managed by other people. This causes confusion and can delay deadlines, especially when projects require high collaboration.
                     </p>
                     <figure>
-                        <img src="assests/trackit/features.png" alt="Display options" style="width:100%">
+                        <img src="assests/trackit/personas.png" alt="Personas of the two user types" style="width:100%">
                         <figcaption>
-                            I worked closely with product managers to gather user requirements & transform them into clear features & design decisions.
+                            We are designing the tools for two different types of users. Our primary users are the analysts. I built flows for both personas.
                         </figcaption>
                     </figure>
-                    <h4>Taking control of the inbox</h4>
+                    <h3>Understanding the space through cross-functional collaboration</h3>
                     <p>
-                       Using existing research and interviews from UX researchers, I geared my design to solve for these three areas:
+                        I worked in close collaboration with 1 UX researcher, 2 designers, 3 product analysts, & 3 devs to understand the problem space.
                     </p>
-                    <ol>
-                        <li>
-                            Users need to be alerted to urgent messages as soon as possible. 
-                        </li>
-                        <li>
-                            Users planned to spend most of their time in this platform even at the MVP stage.
-                        </li>
-                        <li>
-                            For our specific users, there are specific key details that users expect every notification to have (e.g., owner, trigger, & status)
-                        </li>
-                    </ol>
-                    <p>In short, notifications have prioritize for urgency, be informative, & templatize specific deatils</p>
+                    <ul>
+                        <li>I did my own research into the existing design systems for inspiration.</li>
+                        <li>I set up knowledge transfer meetings with the UX researcher & designers to understand the vision & collect user research & statistics.</li>
+                        <li>I planned a hothouse / workshop to gather people on it</li>
+                        <li>I collaborated closely with the product analysts to develop the product requirements documentation</li>
+                        <li>I worked with devs to understand technical constraints & align on priorities for development</li>
+                    </ul>
+                    <figure>
+                        <img src="assests/trackit/feedback tracker.png" alt="Feedback tracker document" style="width:100%">
+                        <figcaption>
+                            I created and maintained a feedback tracker to help me & the other designer keep track of the hundreds of feedback that we got over the months for various features and versions of the designs.
+                        </figcaption>
+                    </figure>
                 </section>
                 <section class="project-content-section" id="Design & Evaluate">
                     <h2>Phase 2: Design & Test</h2>
-                    <h3>Working in an agile environment for incremental improvements</h3>
                     <p>
-                        As I worked on the designs from low-fi to high-fi, I delivered a set of prototypes to test for users each month. I collaborated with our user researcher in an agile manner to get the right questions asked. I worked incrementally to integrate design decisions into the prototype. Here were some of the key insights that we discovered in the process:
+                        The notifications system has to solve for these areas:
                     </p>
                     <ol>
-                        <li>
-                            Users cared about actionable notifications (e.g., You need to fix a failure) and not so much passive notifications (e.g., Automated action was a success.)
-                        </li>
-                        <li>
-                            Users preferred a simple inbox interface, instead of one with a lot of functionality (e.g., 5+ filters & ability to favorite)
-                        </li>
-                        <li>
-                            Users had a specific order to prioritize most notifications and discoverability was the most important, beyond knowing what the notification was.
-                        </li>
+                        <li>Users need to be alerted to urgent messages as soon as possible.</li>
+                        <li>Users planned to spend most of their time in this platform even at the MVP stage.</li>
+                        <li>For our specific users, there are specific key details that users expect every notification to have (e.g., owner, trigger, & status)</li>
                     </ol>
+                    <p>In short, notifications need to prioritize for urgency, be informative, & templatize specific details. It also has to smoothly integrate into the rest of the task management platform.</p>
+                    <figure>
+                        <img src="assests/trackit/features.png" alt="Different parts of the notifications system" style="width:100%">
+                        <figcaption>
+                            This shows key features like the AI Chat feature, dashboard, & notifications.
+                        </figcaption>
+                    </figure>
+                    <h3>Delivering designs to test every month</h3>
+                    <p>
+                        During this time, I was delivering a final design by the end of the month to test with users and stakeholders. I worked on the designs from low-fi to high-fi in incremental progression. I worked primarily end-to-end on notifications, but supported wherever needed, including:
+                    </p>
+                    <ul>
+                        <li>Dashboard interface (how your work gets displayed on the main screen)</li>
+                        <li>Anomaly detection integrations</li>
+                        <li>Talk to your chatbot (AI chatbot assistance)</li>
+                    </ul>
+                    <figure>
+                        <img src="assests/trackit/workshop.png" alt="Workshop session" style="width:100%">
+                        <figcaption>
+                            I conducted an in-person and virtual workshop to get alignment & consensus with 30+ stakeholders & users that the notifications & home dashboard mid-fi wireframes were correct.
+                        </figcaption>
+                    </figure>
+                    <h3>Integrating system-levels thinking</h3>
+                    <p>
+                        Since my design lived within the context of a task management platform, which was still being designed, developed, and tested, I also worked & filled in areas that needed additional help. This included:
+                    </p>
+                    <ul>
+                        <li>Facilitating requirements gathering for the whole task management platform by creating a feedback tracker</li>
+                        <li>Developing a proof-of-concept for an AI chatbot to help analysts work more efficiently on their workflow.</li>
+                        <li>Updating existing design system components to scale the project & improve coordination between designers</li>
+                        <li>Creating UMUX Lite surveys in-between to ensure that the prototype is going in the right direction with metrics</li>
+                        <li>Participating in user-feedback sessions, guiding users through the mock-ups, & collaborating with the UX researcher to answer the right questions for the design</li>
+                    </ul>
                     <figure>
                         <img src="assests/trackit/advance figma prototype.png" alt="Screen of Figma file with advanced prototyping technique of using variables" style="width:100%">
                         <figcaption>
-                            I used atomic design principles & advanced Figma prototyping techniques such as using variables, to create high-fidelity assests.
+                            I used atomic design principles & advanced Figma prototyping techniques such as using variables, to create high-fidelity assets.
                         </figcaption>
                     </figure>
-                    <p>
-                        The key insights helped me improve the notifications design so that users are able to address the most important ones to them, with the correct information that matches their user mental model.
-                    </p>
                 </section>
                 <section class="project-content-section" id="Build & Test">
-                    <h2>Phase 3: Delivery & impact</h2>
-                    <h3>Hand-off</h3>
+                    <h2>Phase 3: Delivery & Impact</h2>
                     <p>
-                        To ensure a smooth transition from design to development, I documented the notification system’s components, states, behaviors, and interaction patterns for engineering handoff. I provided clear specifications and usage guidance for different notification types, helping the team maintain consistency across the product while supporting future additions to the system. This documentation also created a shared reference point for designers and developers as the notification experience evolved.
+                        I delivered high-fidelity, pixel-perfect mock-ups and userflows that had major interactions for the MVP launch of the product, affecting hundreds of analysts on the platform. The high-fidelity prototype is in development & will be shipped on a platform to ~300 internal analysts & managers.
+                    </p>
+                    <h3>Hitting the OKRs</h3>
+                    <p>
+                        The ultimate goal of the project is to increase workflow efficiency for analysts by 33%. The system is launched in Oct 2026. Through user testing, we confirmed that the MVP does take less time than the current process.
+                    </p>
+                    <h3 id="prototype">Final prototype with advanced prototyping techniques</h3>
+                    <p>
+                        Here is a re-creation of the prototype that I built alongside some simple interactions to give you a better feel about the complexity of the system and features that I was developing.
                     </p>
                     <figure>
-                        <iframe 
-                        src="https://embed.figma.com/proto/SdhXA53vx117WCyV5t6F3Z/Notifications?node-id=44-20794&viewport=-62%2C431%2C0.11&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A29&page-id=1%3A28&embed-host=share" 
+                        <iframe
+                        src="https://embed.figma.com/proto/SdhXA53vx117WCyV5t6F3Z/Notifications?node-id=44-20794&viewport=-62%2C431%2C0.11&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A29&page-id=1%3A28&embed-host=share"
                         title="working prototype" allowfullscreen>
                         </iframe>
                         <figcaption>
-                            This is a re-creation of a high-fidelity prototype that made for work. You can select filters, go through tabs, & see different design templates of different types of notifications that exist in the task management platform. 
+                            This is a re-creation of the platform. Feel free to click around and select what you’re interested in.
                         </figcaption>
                     </figure>
                 </section>
