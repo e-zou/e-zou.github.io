@@ -227,6 +227,8 @@ main > section {
 
 main {
   width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
   padding-bottom: 50px;
 }
 
@@ -272,6 +274,8 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1800px;
+  margin: 0 auto;
   padding: 0 10rem;
 }
 
@@ -467,9 +471,8 @@ iframe {
 /******************************** INDEX PAGE *****************************/
 
 .section-hero {
-  background-image: url('assests/hero/bg_lines.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -478,9 +481,77 @@ iframe {
   padding: 2rem 160px;
 }
 
+/* Guide lines marking the trim the hero image & text touch */
+.section-hero:not(.about-hero)::before,
+.section-hero:not(.about-hero)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #E1E4E8;
+}
+
+.section-hero:not(.about-hero)::before {
+  left: 160px;
+}
+
+.section-hero:not(.about-hero)::after {
+  right: 160px;
+}
+
+/* More guide lines, touching the inner edges of the image & text */
+.section-hero:not(.about-hero) .hero-image::after,
+.section-hero:not(.about-hero) .hero-text::before {
+  content: '';
+  position: absolute;
+  top: -1000px;
+  bottom: -1000px;
+  width: 1px;
+  background: #E1E4E8;
+}
+
+.section-hero:not(.about-hero) .hero-image::after {
+  right: 0;
+}
+
+.section-hero:not(.about-hero) .hero-text::before {
+  left: 0;
+}
+
+/* Horizontal guide lines above & below the picture and each line of text */
+.section-hero:not(.about-hero) .hero-image,
+.section-hero:not(.about-hero) .hero-text h1,
+.section-hero:not(.about-hero) .hero-text h2 {
+  position: relative;
+}
+
+.section-hero:not(.about-hero) .hero-image::before,
+.section-hero:not(.about-hero) .hero-text h1::before,
+.section-hero:not(.about-hero) .hero-text h2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1000px;
+  right: -1000px;
+  background-image:
+    linear-gradient(#E1E4E8, #E1E4E8),
+    linear-gradient(#E1E4E8, #E1E4E8);
+  background-size: 100% 1px, 100% 1px;
+  background-position: top, bottom;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none;
+}
+
 .section-hero.about-hero {
   background-image: none;
   background-color: #F7F9FC;
+}
+
+.hero-text {
+  position: relative;
 }
 
 .hero-text h2 {
@@ -549,6 +620,14 @@ iframe {
   .section-hero {
     flex-direction: column;
     padding: 2rem;
+  }
+
+  .section-hero:not(.about-hero)::before {
+    left: 2rem;
+  }
+
+  .section-hero:not(.about-hero)::after {
+    right: 2rem;
   }
 
   .hero-image {
@@ -746,10 +825,12 @@ main > hr {
   min-height: 640px;
   padding: 0;
   overflow: hidden;
+  background-color: #F7F9FC;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
 }
 
 .case-study-hero__text {
-  background: #F7F9FC;
   color: var(--color-text);
   display: flex;
   flex-direction: column;
@@ -772,7 +853,6 @@ main > hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #F7F9FC;
   padding: 3rem 10rem 3rem 3rem;
 }
 
