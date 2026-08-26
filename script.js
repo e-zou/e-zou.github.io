@@ -135,7 +135,47 @@ function setupHandWave() {
   });
 }
 
-// 6. Scroll back to the top
+// 6. Cycle hero role title
+function setupRoleCycler() {
+  const el = document.getElementById("roleCycle");
+  if (!el) return;
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const roles = ["Product Designer", "UI/UX Designer", "UX Researcher", "UX Strategist"];
+  let index = 0;
+  let intervalId = null;
+
+  function advance() {
+    el.classList.add("role-cycle--fade");
+
+    setTimeout(() => {
+      index = (index + 1) % roles.length;
+      el.textContent = roles[index];
+      el.classList.remove("role-cycle--fade");
+
+      // Stop once the cycle loops back around to "Product Designer"
+      if (index === 0) stopCycle();
+    }, 400);
+  }
+
+  function startCycle() {
+    if (intervalId || reduceMotion) return;
+    intervalId = setInterval(advance, 2400);
+  }
+
+  function stopCycle() {
+    clearInterval(intervalId);
+    intervalId = null;
+  }
+
+  el.addEventListener("click", () => {
+    intervalId ? stopCycle() : startCycle();
+  });
+
+  startCycle();
+}
+
+// 7. Scroll back to the top
 function setupBackToTop() {
   const backToTopBtn = document.getElementById("backToTop");
 
@@ -158,4 +198,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setupSectionHighlighter();
   setupHeroGifToggle();
   setupHandWave();
+  setupRoleCycler();
 });

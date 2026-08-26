@@ -487,6 +487,19 @@ button.main-button:hover {
   font-weight: 400;
 }
 
+.role-cycle {
+  display: inline-block;
+  color: var(--color-blue);
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.role-cycle--fade {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
 .hero-image {
   position: relative;
   width: 70%;
@@ -535,6 +548,10 @@ button.main-button:hover {
   row-gap: 2rem;
 }
 
+.section-projects > h2 {
+  grid-column: 1 / -1;
+}
+
 @media (max-width: 768px) {
   .section-projects {
     grid-template-columns: 1fr;
@@ -544,15 +561,9 @@ button.main-button:hover {
 .project-card {
   width: 100%;
   background: #ffffff;
+  border: 1px solid #E1E4E8;
   border-radius: 1.5rem;
   padding: 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
 }
 
 .project-card>img {
